@@ -1,0 +1,30 @@
+<h1>Listing players</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @players.each do |player| %>
+    <tr>
+      <td><%= player.name %></td>
+      <td><%= player.position %></td>
+      <td><%= player.points %></td>
+      <td><%= player.assists %></td>
+      <td><%= player.rebounds %></td>
+      <td><%= player.blocks %></td>
+      <td><%= player.steals %></td>
+      <td><%= player.fgMade %></td>
+      <td><%= player.fgMissed %></td>
+      <td><%= player.fgp %></td>
+      <td><%= player.tfgMade %></td>
+      <td><%= player.tfgMissed %></td>
+      <td><%= player.tfgp %></td>
+      <td><%= player.ftMade %></td>
+      <td><%= player.ftMissed %></td>
+      <td><%= player.ftp %></td>
+      <td><%= player.ranking %></td>
+    </tr>
+  <% end %>
+</table>
