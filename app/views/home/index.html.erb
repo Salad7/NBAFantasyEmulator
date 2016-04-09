@@ -1,7 +1,8 @@
 <h1>Listing players</h1>
- 
+ <div class="center jumbotron">
 <table>
   <tr>
+    <th>Team</th>
     <th>Name </th>
     <th>Position </th>
     <th>Points </th>
@@ -23,6 +24,7 @@
  
   <% @players.each do |player| %>
     <tr>
+      <td><%= player.team %></td>
       <td><%= player.name %></td>
       <td><%= player.position %></td>
       <td><%= player.points %></td>
@@ -40,6 +42,17 @@
       <td><%= player.ftTotal %></td>
       <td><%= player.ftp %></td>
       <td><%= player.ranking %></td>
+    </tr>
+  <% end %>
+  <% @teams.each do |team| %>
+    <tr>
+      <td><%= team.name %></td>
+      <td><%= team.record %></td>
+      <td><%= team.points %></td>
+      <td><%= team.assists %></td>
+      <td><%= team.rebounds %></td>
+      <td><%= team.blocks %></td>
+      <td><%= team.steals %></td>
     </tr>
   <% end %>
 </table>
