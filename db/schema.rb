@@ -14,23 +14,23 @@
 ActiveRecord::Schema.define(version: 20160312133237) do
 
   create_table "players", force: :cascade do |t|
-      t.string 'name'
-      t.string 'position'
-      t.int points
-      t.int assists
-      t.int rebounds
-      t.int blocks
-      t.int steals
-      t.double fgMade
-      t.double fgMissed
-      t.double fgp
-      t.double tfgMade
-      t.double tfgMissed
-      t.double tfgp
-      t.double ftMade
-      t.double ftMissed
-      t.double ftp
-      t.int ranking
+    t.string  "name"
+    t.string  "position"
+    t.integer "points"
+    t.integer "assists"
+    t.integer "rebounds"
+    t.integer "blocks"
+    t.integer "steals"
+    t.decimal "fgMade"
+    t.decimal "fgTotal"
+    t.decimal "fgp"
+    t.decimal "tfgMade"
+    t.decimal "tfgTotal"
+    t.decimal "tfgp"
+    t.decimal "ftMade"
+    t.decimal "ftTotal"
+    t.decimal "ftp"
+    t.integer "ranking"
   end
 
 end

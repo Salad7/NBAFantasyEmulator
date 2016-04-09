@@ -2,8 +2,23 @@
  
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Name </th>
+    <th>Position </th>
+    <th>Points </th>
+    <th>Assists </th>
+    <th>Rebounds </th>
+    <th>Blocks </th>
+    <th>Steals </th>
+    <th>FG Made </th>
+    <th>FG Total </th>
+    <th>FG Percentage </th>
+    <th>3FG Made </th>
+    <th>3FG Total </th>
+    <th>3FG Percent </th>
+    <th>FT Made </th>
+    <th>FT Total </th>
+    <th>FT Percent </th>
+    <th>Ranking </th>
   </tr>
  
   <% @players.each do |player| %>
@@ -16,13 +31,13 @@
       <td><%= player.blocks %></td>
       <td><%= player.steals %></td>
       <td><%= player.fgMade %></td>
-      <td><%= player.fgMissed %></td>
+      <td><%= player.fgTotal %></td>
       <td><%= player.fgp %></td>
       <td><%= player.tfgMade %></td>
-      <td><%= player.tfgMissed %></td>
+      <td><%= player.tfgTotal %></td>
       <td><%= player.tfgp %></td>
       <td><%= player.ftMade %></td>
-      <td><%= player.ftMissed %></td>
+      <td><%= player.ftTotal %></td>
       <td><%= player.ftp %></td>
       <td><%= player.ranking %></td>
     </tr>
