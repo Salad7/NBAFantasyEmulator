@@ -1,25 +1,26 @@
 <h1>Listing players</h1>
  <div class="center jumbotron">
-<table>
+  
+   <table class = "table" style="width:100%">
   <tr>
-    <th>Team</th>
-    <th>Name </th>
-    <th>Position </th>
-    <th>Points </th>
-    <th>Assists </th>
-    <th>Rebounds </th>
-    <th>Blocks </th>
-    <th>Steals </th>
-    <th>FG Made </th>
-    <th>FG Total </th>
-    <th>FG Percentage </th>
-    <th>3FG Made </th>
-    <th>3FG Total </th>
-    <th>3FG Percent </th>
-    <th>FT Made </th>
-    <th>FT Total </th>
-    <th>FT Percent </th>
-    <th>Ranking </th>
+    <td><%= link_to 'Team', controller: 'home' %></td>
+    <td>Name </td>
+    <td>Position </td>
+    <td><%= link_to 'Points', controller: 'home' ,:query => "sortPoints"%></td>
+    <td><%= link_to 'Assists', controller: 'home' ,:query => "sortAssists"%></td>
+    <td><%= link_to 'Rebounds', controller: 'home' ,:query => "sortRebounds"%></td>
+    <td><%= link_to 'Blocks', controller: 'home' ,:query => "sortBlocks"%></td>
+    <td><%= link_to 'Steals', controller: 'home' ,:query => "sortSteals"%></td>
+    <td>FG Made </td>
+    <td>FG Total </td>
+    <td>FG Percentage</td>
+    <td>3FG Made </td>
+    <td>3FG Total </td>
+    <td>3FG Percent </td>
+    <td>FT Made </td>
+    <td>FT Total </td>
+    <td>FT Percent </td>
+    <td>Ranking </td>
   </tr>
  
   <% @players.each do |player| %>
@@ -44,10 +45,11 @@
       <td><%= player.ranking %></td>
     </tr>
   <% end %>
+  </table> 
   <% @teams.each do |team| %>
     <tr>
       <td><%= team.name %></td>
-      <td><%= team.record %></td>
+      <td><%= team.team_record %></td>
       <td><%= team.points %></td>
       <td><%= team.assists %></td>
       <td><%= team.rebounds %></td>
@@ -55,4 +57,7 @@
       <td><%= team.steals %></td>
     </tr>
   <% end %>
+
 </table>
+<%= link_to "Obliterate", "/deleteall", class: "btn btn-lg btn-primary" %>
+<%= link_to "Add Player", new_home_path, class: "btn btn-lg btn-primary" %>

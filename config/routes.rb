@@ -56,6 +56,8 @@ Rails.application.routes.draw do
   
   #routes map URIS to methods
   get 'welcome' => 'pages#home'
+  get 'deleteall' => 'home#deleteall'
   resources :players
+  resources :home
   root 'home#index'
 end
