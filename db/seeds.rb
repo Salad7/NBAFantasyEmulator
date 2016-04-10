@@ -521,3 +521,129 @@ Player.create!(
     :ftp => 0.000,
     :ranking => 1
 )
+
+Player.create!(
+    :team => 'Portland Trailblazers',
+    :name => 'Klay Thompson',
+    :position => '1',
+    :points => 46,
+    :assists => 3,
+    :rebounds => 3,
+    :blocks => 0,
+    :steals => 3,
+    :fgMade => 8,
+    :fgTotal => 12,
+    :fgp => 0.666,
+    :tfgMade => 7.0,
+    :tfgTotal => 15.0,
+    :tfgp => 0.466,
+    :ftMade => 9.0,
+    :ftTotal => 24.0,
+    :ftp => 0.375,
+    :ranking => 1
+)
+
+Player.create!(
+    :team => 'Portland Trailblazers',
+    :name => 'Tracy McGrady',
+    :position => '2',
+    :points => 19,
+    :assists => 0,
+    :rebounds => 4,
+    :blocks => 0,
+    :steals => 0,
+    :fgMade => 7,
+    :fgTotal => 11,
+    :fgp => 0.636,
+    :tfgMade => 1.0,
+    :tfgTotal => 4.0,
+    :tfgp => 0.250,
+    :ftMade => 2.0,
+    :ftTotal => 3.0,
+    :ftp => 0.666,
+    :ranking => 1
+)
+
+Player.create!(
+    :team => 'Portland Trailblazers',
+    :name => 'Ben Wallace',
+    :position => '3',
+    :points => 5,
+    :assists => 1,
+    :rebounds => 17,
+    :blocks => 0,
+    :steals => 0,
+    :fgMade => 2,
+    :fgTotal => 7,
+    :fgp => 0.285,
+    :tfgMade => 0.0,
+    :tfgTotal => 0.0,
+    :tfgp => 0.000,
+    :ftMade => 1.0,
+    :ftTotal => 2.0,
+    :ftp => 0.500,
+    :ranking => 1
+)
+
+Player.create!(
+    :team => 'Toronto Raptors',
+    :name => 'Tony Parker',
+    :position => '1',
+    :points => 15,
+    :assists => 5,
+    :rebounds => 0,
+    :blocks => 0,
+    :steals => 1,
+    :fgMade => 6,
+    :fgTotal => 9,
+    :fgp => 0.666,
+    :tfgMade => 1.0,
+    :tfgTotal => 2.0,
+    :tfgp => 0.500,
+    :ftMade => 0.0,
+    :ftTotal => 0.0,
+    :ftp => 0.000,
+    :ranking => 1
+)
+
+Player.create!(
+    :team => 'Toronto Raptors',
+    :name => 'James Harden',
+    :position => '2',
+    :points => 43,
+    :assists => 3,
+    :rebounds => 1,
+    :blocks => 0,
+    :steals => 1,
+    :fgMade => 12,
+    :fgTotal => 16,
+    :fgp => 0.750,
+    :tfgMade => 5.0,
+    :tfgTotal => 15.0,
+    :tfgp => 0.333,
+    :ftMade => 4,
+    :ftTotal => 9.0,
+    :ftp => 0.444,
+    :ranking => 1
+)
+
+Player.create!(
+    :team => 'Toronto Raptors',
+    :name => 'Yao Ming',
+    :position => '3',
+    :points => 20,
+    :assists => 1,
+    :rebounds => 21,
+    :blocks => 0,
+    :steals => 0,
+    :fgMade => 10,
+    :fgTotal => 18,
+    :fgp => 0.555,
+    :tfgMade => 0.0,
+    :tfgTotal => 0.0,
+    :tfgp => 0.000,
+    :ftMade => 0.0,
+    :ftTotal => 0.0,
+    :ftp => 0.000,
+    :ranking => 1
+)
