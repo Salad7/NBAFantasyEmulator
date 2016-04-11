@@ -13,7 +13,6 @@ class PlayersController < ApplicationController
     
     def show
         @player = Player.find(params[:id])
-        byebug
       redirect_to home_index_path  
     end
     

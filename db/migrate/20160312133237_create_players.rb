@@ -30,7 +30,7 @@ class CreatePlayers < ActiveRecord::Migration
       t.integer :rebounds
       t.integer :blocks
       t.integer :steals
-      t.decimal :fgMade
+      t.float :fgMade
       t.decimal :fgTotal
       t.decimal :fgp
       t.decimal :tfgMade
@@ -39,7 +39,7 @@ class CreatePlayers < ActiveRecord::Migration
       t.decimal :ftMade
       t.decimal :ftTotal
       t.decimal :ftp
-      t.integer :ranking
+      t.decimal :ranking
     end
   end
   

@@ -1,0 +1,65 @@
+<h1>Update Player Stats</h1>
+ 
+<%= form_for :home, url: home_path(@player), method: :patch do |f| %>
+  <p>
+    <%= f.label :points %><br>
+    <%= f.text_field :points %>
+  </p>
+   <p>
+    <%= f.label :assists %><br>
+    <%= f.text_field :assists %>
+  </p>
+   <p>
+    <%= f.label :rebounds %><br>
+    <%= f.text_field :rebounds %>
+  </p>
+   <p>
+    <%= f.label :blocks %><br>
+    <%= f.text_field :blocks %>
+  </p>
+   <p>
+    <%= f.label :steals %><br>
+    <%= f.text_field :steals %>
+  </p>
+   <p>
+    <%= f.label :fgMade %><br>
+    <%= f.text_field :fgMade %>
+  </p>
+   <p>
+    <%= f.label :fgTotal %><br>
+    <%= f.text_field :fgTotal %>
+  </p>
+   <p>
+    <%= f.label :fgp %><br>
+    <%= f.text_field :fgp %>
+  </p>
+   <p>
+    <%= f.label :tfgMade %><br>
+    <%= f.text_field :tfgMade %>
+  </p> <p>
+    <%= f.label :tfgTotal %><br>
+    <%= f.text_field :tfgTotal %>
+  </p> <p>
+    <%= f.label :tfgp %><br>
+    <%= f.text_field :tfgp %>
+  </p>
+   <p>
+    <%= f.label :ftMade %><br>
+    <%= f.text_field :ftMade%>
+  </p>
+   <p>
+    <%= f.label :ftTotal %><br>
+    <%= f.text_field :ftTotal %>
+  </p> <p>
+    <%= f.label :ftp %><br>
+    <%= f.text_field :ftp %>
+  </p>
+  
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', home_index_path %>

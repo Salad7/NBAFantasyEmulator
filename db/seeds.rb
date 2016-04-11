@@ -582,7 +582,7 @@ Player.create!(
     :ftMade => 1.0,
     :ftTotal => 2.0,
     :ftp => 0.500,
-    :ranking => 1
+    :ranking => 1#(:points) + (0.4 * :fgMade) - (0.7 * :fgTotal) - (0.4 * (:ftTotal - :ftMade)) + (1.3 * :rebounds) + (1.3 * :steals) + (1.3 * :assists) + (1.3 * :blocks)
 )
 
 Player.create!(
@@ -603,7 +603,7 @@ Player.create!(
     :ftMade => 0.0,
     :ftTotal => 0.0,
     :ftp => 0.000,
-    :ranking => 1
+    :ranking => 1#(:points) + (0.4 * :fgMade) - (0.7 * :fgTotal) - (0.4 * (:ftTotal - :ftMade)) + (1.3 * :rebounds) + (1.3 * :steals) + (1.3 * :assists) + (1.3 * :blocks)
 )
 
 Player.create!(

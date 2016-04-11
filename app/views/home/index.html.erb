@@ -20,13 +20,13 @@
     <td><%= link_to 'FT Made', controller: 'home' ,:query => "sortFTMade"%></td>
     <td><%= link_to 'FT Total', controller: 'home' ,:query => "sortFTTotal"%></td>
     <td><%= link_to 'FT Percent', controller: 'home' ,:query => "sortFTP"%></td>
-    <td>Ranking </td>
+    <td><%= link_to 'Player Efficiency Ranking', controller: 'home' ,:query => "sortRanking"%></td>
   </tr>
  
   <% @players.each do |player| %>
     <tr>
       <td><%= player.team %></td>
-      <td><%= player.name %></td>
+      <td><%= link_to player.name, edit_home_path(player) %></td>
       <td><%= player.position %></td>
       <td><%= player.points %></td>
       <td><%= player.assists %></td>
@@ -61,3 +61,4 @@
 </table>
 <%= link_to "Obliterate", "/deleteall", class: "btn btn-lg btn-primary" %>
 <%= link_to "Add Player", new_home_path, class: "btn btn-lg btn-primary" %>
+
