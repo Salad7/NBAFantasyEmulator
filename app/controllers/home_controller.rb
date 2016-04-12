@@ -52,8 +52,7 @@ class HomeController < ApplicationController
         @teams = Team.all
     else
     @players = Player.all
-    @players.each do |player|
-    player.ranking = (player.points) + (0.4 * player.fgMade) - (0.7 * player.fgTotal) + (0.9 * player.tfgMade) - (0.36 * player.tfgTotal) - (0.4 * (player.ftTotal - player.ftMade)) + (1.3 * player.rebounds) + (1.3 * player.steals) + (1.3 * player.assists) + (1.3 * player.blocks)
+    @players.each do |player|    player.ranking = (player.points) + (0.4 * player.fgMade) - (0.7 * player.fgTotal) + (0.9 * player.tfgMade) - (0.36 * player.tfgTotal) - (0.4 * (player.ftTotal - player.ftMade)) + (1.3 * player.rebounds) + (1.3 * player.steals) + (1.3 * player.assists) + (1.3 * player.blocks)
     player.save!
     end
     @teams = Team.all
@@ -62,8 +61,8 @@ class HomeController < ApplicationController
     end
     
     def deleteall
-        Player.delete_all
-        Team.delete_all
+        Player.destroy_all
+        Team.destroy_all
         redirect_to home_index_path
     end
     
@@ -95,7 +94,7 @@ class HomeController < ApplicationController
     
     def player_params
         params.require(:home).permit(:points, :assists, :rebounds, :blocks, :steals,
-         :fgMade, :fgTotal, :fgp, :tfgMade, :tfgTotal, :tgp, :ftMade, :ftTotal, :ftp, :ranking)
+         :fgMade, :fgTotal, :fgp, :tfgMade, :tfgTotal, :tfgp, :ftMade, :ftTotal, :ftp, :ranking)
     end
   
 #Game Score = Points Scored + (0.4 x Field Goals) – (0.7 x Field Goal Attempts) – (0.4 x (Free Throw Attempts – Free Throws)) + (0.7 x Offensive Rebounds) + (0.3 x Defensive Rebounds) + Steals + (0.7 x Assists) + (0.7 x Blocks) – (0.4 x Personal Fouls) – Turnovers

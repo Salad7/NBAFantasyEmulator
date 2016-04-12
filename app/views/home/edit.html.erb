@@ -1,57 +1,58 @@
 <h1>Update Player Stats</h1>
- 
+
+
 <%= form_for :home, url: home_path(@player), method: :patch do |f| %>
   <p>
-    <%= f.label :points %><br>
+    <%= f.label "Points: #{@player.points}"%><br>
     <%= f.text_field :points %>
   </p>
    <p>
-    <%= f.label :assists %><br>
+    <%= f.label "Assists: #{@player.assists}" %><br>
     <%= f.text_field :assists %>
   </p>
    <p>
-    <%= f.label :rebounds %><br>
+    <%= f.label "Rebounds: #{@player.rebounds}" %><br>
     <%= f.text_field :rebounds %>
   </p>
    <p>
-    <%= f.label :blocks %><br>
+    <%= f.label "Blocks: #{@player.blocks}" %><br>
     <%= f.text_field :blocks %>
   </p>
    <p>
-    <%= f.label :steals %><br>
+    <%= f.label "Steals: #{@player.steals}" %><br>
     <%= f.text_field :steals %>
   </p>
    <p>
-    <%= f.label :fgMade %><br>
+    <%= f.label "FG Made: #{@player.fgMade}" %><br>
     <%= f.text_field :fgMade %>
   </p>
    <p>
-    <%= f.label :fgTotal %><br>
+    <%= f.label "FG Total: #{@player.fgTotal}" %><br>
     <%= f.text_field :fgTotal %>
   </p>
    <p>
-    <%= f.label :fgp %><br>
+    <%= f.label "FG Percent: #{@player.fgp}" %><br>
     <%= f.text_field :fgp %>
   </p>
    <p>
-    <%= f.label :tfgMade %><br>
+    <%= f.label "TFG Made: #{@player.tfgMade}" %><br>
     <%= f.text_field :tfgMade %>
   </p> <p>
-    <%= f.label :tfgTotal %><br>
+    <%= f.label "TFG Total: #{@player.tfgTotal}" %><br>
     <%= f.text_field :tfgTotal %>
   </p> <p>
-    <%= f.label :tfgp %><br>
+    <%= f.label "TFG Percent: #{@player.tfgp}" %><br>
     <%= f.text_field :tfgp %>
   </p>
    <p>
-    <%= f.label :ftMade %><br>
+    <%= f.label "FT Made: #{@player.ftMade}" %><br>
     <%= f.text_field :ftMade%>
   </p>
    <p>
-    <%= f.label :ftTotal %><br>
+    <%= f.label "FT Total: #{@player.ftTotal}" %><br>
     <%= f.text_field :ftTotal %>
   </p> <p>
-    <%= f.label :ftp %><br>
+    <%= f.label "FT Percent: #{@player.ftp}" %><br>
     <%= f.text_field :ftp %>
   </p>
   
@@ -59,7 +60,6 @@
   <p>
     <%= f.submit %>
   </p>
- 
-<% end %>
+ <% end %>
  
 <%= link_to 'Back', home_index_path %>
