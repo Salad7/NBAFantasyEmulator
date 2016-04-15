@@ -80,7 +80,7 @@ class HomeController < ApplicationController
     end
     
     def create
-        @player = Player.create!([:name])
+        @player = Player.create!(player_params)
         redirect_to @player
     end
     

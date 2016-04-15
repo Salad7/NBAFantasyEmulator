@@ -1,15 +1,68 @@
 <%= form_for :player, url: players_path do |f| %>
-  <p>
-    <%= f.label :team %><br>
+<p>
+    <%= f.label "Team:"%><br>
     <%= f.text_field :team %>
   </p>
- 
   <p>
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
+    <%= f.label "Name:"%><br>
+    <%= f.text_field :name %>
   </p>
- 
   <p>
+    <%= f.label "Points:"%><br>
+    <%= f.text_field :points %>
+  </p>
+   <p>
+    <%= f.label "Assists:" %><br>
+    <%= f.text_field :assists %>
+  </p>
+   <p>
+    <%= f.label "Rebounds:" %><br>
+    <%= f.text_field :rebounds %>
+  </p>
+   <p>
+    <%= f.label "Blocks:" %><br>
+    <%= f.text_field :blocks %>
+  </p>
+   <p>
+    <%= f.label "Steals:" %><br>
+    <%= f.text_field :steals %>
+  </p>
+   <p>
+    <%= f.label "FG Made:" %><br>
+    <%= f.text_field :fgMade %>
+  </p>
+   <p>
+    <%= f.label "FG Total:" %><br>
+    <%= f.text_field :fgTotal %>
+  </p>
+   <p>
+    <%= f.label "FG Percent:" %><br>
+    <%= f.text_field :fgp %>
+  </p>
+   <p>
+    <%= f.label "TFG Made:" %><br>
+    <%= f.text_field :tfgMade %>
+  </p>
+    <%= f.label "TFG Total:" %><br>
+    <%= f.text_field :tfgTotal %>
+  </p>
+    <%= f.label "TFG Percent:" %><br>
+    <%= f.text_field :tfgp %>
+  </p>
+   <p>
+    <%= f.label "FT Made:" %><br>
+    <%= f.text_field :ftMade%>
+  </p>
+   <p>
+    <%= f.label "FT Total:" %><br>
+    <%= f.text_field :ftTotal %>
+  </p>
+  <p>
+    <%= f.label "FT Percent:" %><br>
+    <%= f.text_field :ftp %>
+  </p>
+  
+   <p>
     <%= f.submit %>
   </p>
 <% end %>
