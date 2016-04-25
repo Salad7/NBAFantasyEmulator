@@ -54,10 +54,16 @@ class HomeController < ApplicationController
     @players = Player.all
     @players.each do |player|    player.ranking = (player.points) + (0.4 * player.fgMade) - (0.7 * player.fgTotal) + (0.9 * player.tfgMade) - (0.36 * player.tfgTotal) - (0.4 * (player.ftTotal - player.ftMade)) + (1.3 * player.rebounds) + (1.3 * player.steals) + (1.3 * player.assists) + (1.3 * player.blocks)
     player.save!
-    end
     @teams = Team.all
+    @teams.each do |t|
+        @players.each do |p|
+            if p.name == t.name
+                t.points += p.points
+            end
+        end
     end
-    
+    #@teams = Team.all
+    end
     end
     
     def deleteall
