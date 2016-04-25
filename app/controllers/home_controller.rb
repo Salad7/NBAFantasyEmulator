@@ -65,6 +65,7 @@ class HomeController < ApplicationController
     #@teams = Team.all
     end
     end
+    end
     
     def deleteall
         Player.destroy_all
