@@ -62,7 +62,6 @@ class HomeController < ApplicationController
             end
         end
     end
-    #@teams = Team.all
     end
     end
     end
@@ -103,6 +102,4 @@ class HomeController < ApplicationController
         params.require(:home).permit(:points, :assists, :rebounds, :blocks, :steals,
          :fgMade, :fgTotal, :fgp, :tfgMade, :tfgTotal, :tfgp, :ftMade, :ftTotal, :ftp, :ranking)
     end
-  
-#Game Score = Points Scored + (0.4 x Field Goals) – (0.7 x Field Goal Attempts) – (0.4 x (Free Throw Attempts – Free Throws)) + (0.7 x Offensive Rebounds) + (0.3 x Defensive Rebounds) + Steals + (0.7 x Assists) + (0.7 x Blocks) – (0.4 x Personal Fouls) – Turnovers
 end
