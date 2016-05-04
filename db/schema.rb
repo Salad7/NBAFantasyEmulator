@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160312133237) do
+
+  create_table "players", force: :cascade do |t|
+    t.string  "team"
+    t.string  "name"
+    t.string  "position"
+    t.integer "points"
+    t.integer "assists"
+    t.integer "rebounds"
+    t.integer "blocks"
+    t.integer "steals"
+    t.float   "fgMade"
+    t.decimal "fgTotal"
+    t.decimal "fgp"
+    t.decimal "tfgMade"
+    t.decimal "tfgTotal"
+    t.decimal "tfgp"
+    t.decimal "ftMade"
+    t.decimal "ftTotal"
+    t.decimal "ftp"
+    t.decimal "ranking"
+  end
 
   create_table "teams", force: :cascade do |t|
     t.string  "name"
