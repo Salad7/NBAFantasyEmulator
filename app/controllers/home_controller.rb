@@ -52,7 +52,7 @@ class HomeController < ApplicationController
         @teams = Team.all
     else
     @players = Player.all
-    @players.each do |player|    player.ranking = (player.points) + (0.4 * player.fgMade) - (0.7 * player.fgTotal) + (0.9 * player.tfgMade) - (0.36 * player.tfgTotal) - (0.4 * (player.ftTotal - player.ftMade)) + (1.3 * player.rebounds) + (1.3 * player.steals) + (1.3 * player.assists) + (1.3 * player.blocks)
+    @players.each do |player|    player.ranking = (player.points) + (0.8 * player.fgMade) - (0.5 * player.fgTotal) + (0.9 * player.tfgMade) - (0.36 * player.tfgTotal) - (0.4 * (player.ftTotal - player.ftMade)) + (1.2 * player.rebounds) + (1.2 * player.steals) + (1.3 * player.assists) + (1.2 * player.blocks)
     player.save!
     end
     end
