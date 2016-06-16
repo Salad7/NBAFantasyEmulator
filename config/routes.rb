@@ -59,5 +59,7 @@ Rails.application.routes.draw do
   get 'deleteall' => 'home#deleteall'
   resources :players
   resources :home
+  resources :season
+  resources :team
   root 'home#index'
 end
