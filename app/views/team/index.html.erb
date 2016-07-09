@@ -1,0 +1,50 @@
+<h1>Listing teams</h1>
+ <div class="center jumbotron">
+  
+   <table class = "table" style="width:100%">
+  <tr>
+    <td><%= link_to 'Team', controller: 'home' %></td>
+    <td>Name </td>
+    <td>Position </td>
+    <td><%= link_to 'Points', controller: 'home' ,:query => "sortPoints"%></td>
+    <td><%= link_to 'Assists', controller: 'home' ,:query => "sortAssists"%></td>
+    <td><%= link_to 'Rebounds', controller: 'home' ,:query => "sortRebounds"%></td>
+    <td><%= link_to 'Blocks', controller: 'home' ,:query => "sortBlocks"%></td>
+    <td><%= link_to 'Steals', controller: 'home' ,:query => "sortSteals"%></td>
+    <td><%= link_to 'FG Made', controller: 'home' ,:query => "sortFGMade"%></td>
+    <td><%= link_to 'FG Total', controller: 'home' ,:query => "sortFGTotal"%></td>
+    <td><%= link_to 'FG Percent', controller: 'home' ,:query => "sortFGP"%></td>
+    <td><%= link_to '3FG Made', controller: 'home' ,:query => "sort3FGMade"%></td>
+    <td><%= link_to '3FG Total', controller: 'home' ,:query => "sort3FGTotal"%></td>
+    <td><%= link_to '3FG Percent', controller: 'home' ,:query => "sort3FGP"%></td>
+    <td><%= link_to 'FT Made', controller: 'home' ,:query => "sortFTMade"%></td>
+    <td><%= link_to 'FT Total', controller: 'home' ,:query => "sortFTTotal"%></td>
+    <td><%= link_to 'FT Percent', controller: 'home' ,:query => "sortFTP"%></td>
+    <td><%= link_to 'Team Efficiency Ranking', controller: 'home' ,:query => "sortRanking"%></td>
+  </tr>
+ 
+  <% @teams.each do |team| %>
+    <tr>
+      <td><%= team.team %></td>
+      <td><%= link_to team.name, edit_home_path(team) %></td>
+      <td><%= team.position %></td>
+      <td><%= team.points %></td>
+      <td><%= team.assists %></td>
+      <td><%= team.rebounds %></td>
+      <td><%= team.blocks %></td>
+      <td><%= team.steals %></td>
+      <td><%= team.fgMade %></td>
+      <td><%= team.fgTotal %></td>
+      <td><%= team.fgp %></td>
+      <td><%= team.tfgMade %></td>
+      <td><%= team.tfgTotal %></td>
+      <td><%= team.tfgp %></td>
+      <td><%= team.ftMade %></td>
+      <td><%= team.ftTotal %></td>
+      <td><%= team.ftp %></td>
+      <td><%= team.ranking %></td>
+    </tr>
+  <% end %>
+  </table> 
+
+</table>

@@ -34,14 +34,4 @@ ActiveRecord::Schema.define(version: 20160312133237) do
     t.decimal "ranking"
   end
 
-  create_table "teams", force: :cascade do |t|
-    t.string  "name"
-    t.string  "team_record"
-    t.integer "points"
-    t.integer "assists"
-    t.integer "rebounds"
-    t.integer "blocks"
-    t.integer "steals"
-  end
-
 end
